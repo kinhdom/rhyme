@@ -1,0 +1,69 @@
+
+<div class="alert alert-success" role="alert">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Input</span>
+    </div>
+    <input type="text" class="form-control" placeholder="VD: vâ.n" (keyup)="onKey()" [(ngModel)]="textvalue">
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-dark" *ngIf="isCorrectWord">
+      <thead>
+        <tr>
+          <th scope="col">Ngang</th>
+          <th scope="col">Sắc</th>
+          <th scope="col">Huyền</th>
+          <th scope="col">Hỏi</th>
+          <th scope="col">Ngã</th>
+          <th scope="col">Nặng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let word of arrWords">
+          <td>{{word.ngang}}</td>
+          <td>{{word.sac}}</td>
+          <td>{{word.huyen}}</td>
+          <td>{{word.hoi}}</td>
+          <td>{{word.nga}}</td>
+          <td>{{word.nang}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<!-- 
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">Ngang</th>
+      <th scope="col">Huyền</th>
+      <th scope="col">Sắc</th>
+      <th scope="col">Hỏi</th>
+      <th scope="col">Ngã</th>
+      <th scope="col">Nặng</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      
+    </tr>
+  </tbody>
+</table> -->
